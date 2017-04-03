@@ -37,7 +37,7 @@ Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/4
 ---
 ## Writeup / README
 
-Here is the link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is the link to my [project code](https://github.com/JulePralle/SDC_Term1_Project2_TrafficSignClassifier1/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Load The Data and packages
 In the first code cell all needed packages got imported. 
@@ -68,6 +68,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 ![alt text][image3]
 
 The next chart shows five random choosen examples for every sign label/class id. 
+
 ![alt text][image4]
 
 
@@ -86,17 +87,20 @@ The prerocessing of the data contains the following steps:
 The grayscale conversion is done here because the exact color information is not an important factor to identify and classify traffic signs. This conversion also reduces the number of dimensions of an image from 3 to 1, which reduces the complexity of calculation and leads to a higher efficiency.
 
 Here an example of grayscaling is shown:
+
 ![alt text][image5]
 
 The normalization to the image size is included here to handle arbitrary size image later. The size normalization is necessary because the model is designed to process a fixed size (32x32x1) image.
 
 Here an example of grayscaling and nomalization is shown:
+
 ![alt text][image6]
 
 
 The method of histogram equalization usually increases the global contrast of many images, especially when the usable data of the image is represented by close contrast values. The method is useful in images with backgrounds and foregrounds that are both bright or both dark, which is the case in many images of the data set.
 
 Here an example of grayscaling, normalization and histogram equalization is shown:
+
 ![alt text][image7]
 
 
@@ -150,6 +154,7 @@ The learning rate is not changed in a training session. The dropout technique is
 The already implemented Adam optimizer were used.
 
 Here the training and validation accuracy across the epochs is shown:
+
 ![alt text][image8]
 
 
@@ -159,7 +164,7 @@ Here the training and validation accuracy across the epochs is shown:
 
 The code for calculating the accuracy of the model is located in the 14th cell of the Ipython notebook.
 
-My final model results were:
+My final model results are:
 * Test Accuracy = 0.929
 * Train Accuracy = 0.990
 * Validation Accuracy = 0.956
