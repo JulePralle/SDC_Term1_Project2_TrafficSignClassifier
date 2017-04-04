@@ -122,20 +122,20 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Grayscale image   							| 
 | Convolution 5x5     	| 1x1 stride, valid padding, output 28x28x6 	|
-| RELU					|												|
+| RELU					|	-											|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
 | Convolution 5x5     	| 1x1 stride, valid padding, output 10x10x16 	|
-| RELU					|												|
+| RELU					| -											|
 | Max pooling	      	| 2x2 stride,  output 5x5x16 				|
 | Flatten  | output 400
 | Fully connected		| output 120  |
-| RELU					|												|
-| Dropout					|												|
+| RELU					|			-									|
+| Dropout					|		-										|
 | Fully connected		| output 84  |
-| RELU					|												|
-| Dropout					|												|
+| RELU					|		-										|
+| Dropout					|	-											|
 | Fully connected		| output 43  |
-| Softmax				|         									|
+| Softmax				|    -     									|
 
 
 
@@ -211,11 +211,12 @@ Here are six German traffic signs with their labels that I found on the web:
 ![alt text][image9] 
 
 The quality of the images is mostly fine. 
+
 I would assume that the following aspects of the images could cause problems: 
 * First image (Ahead only) - there are some branches covering the right corner of the sign. 
 * Third image (keep right) - very bright and rotated.
 * Fourth image (Speed limit) - very bright.
-* Sixth image (Roundabout mandatory) has a white spot in it which doesn't belong there.
+* Sixth image (Roundabout mandatory) - has a white spot in it which doesn't belong there.
 
 #### 2. Predictions
 
