@@ -158,8 +158,6 @@ Here the training and validation accuracy across the epochs is shown:
 ![alt text][image8]
 
 
-
-
 #### 5. Evaluate the Model
 
 The code for calculating the accuracy of the model is located in the 14th cell of the Ipython notebook.
@@ -212,7 +210,12 @@ Here are six German traffic signs with their labels that I found on the web:
 
 ![alt text][image9] 
 
-
+The quality of the images is mostly fine. 
+I would assume that the following aspects of the images could cause problems: 
+* First image (Ahead only) - there are some branches covering the right corner of the sign. 
+* Third image (keep right) - very bright and rotated.
+* Fourth image (Speed limit) - very bright.
+* Sixth image (Roundabout mandatory) has a white spot in it which doesn't belong there.
 
 #### 2. Predictions
 
@@ -226,14 +229,14 @@ Here are the results of the prediction:
 | 14: Stop     			| 14: Stop |
 | 38: Keep right					| 38: Keep right |
 | 1: Speed limit (30km/h)	      		| 1: Speed limit (30km/h) |
-| 12: Priority road			| 11: Right-of-way at the next intersection |
+| 11: Right-of-way at the next intersection			| 11: Right-of-way at the next intersection |
 | 40: Roundabout mandatory			| 40: Roundabout mandatory |
 
 
-* actual labels[35, 14, 38, 1, 12, 40]
+* actual labels[35, 14, 38, 1, 11, 40]
 * predicted labels[35 14 38  1 11 40]
-* the model predicted 5 of 6 labels correctly.
-* The accurancy for the 6 new images is 83.333%.
+* the model predicted 6 of 6 labels correctly.
+* The accurancy for the 6 new images is 100.00%.
 
 This is an expected result after the accuracy of the test set of 93%.
 
@@ -300,11 +303,12 @@ The code for making predictions on my final model is located in the 18th cell of
 | .09	      			| 5:	Speed limit (80km/h)				 				|
 | .07				    | 4: Speed limit (70km/h)     							|
 
+
 ##### For image 5:
 * Top 5 Softmax probabilities are: [ 6.99797058  6.69339848  3.21441746  3.21149969  1.74060869].
 * Class ids according to the probabilities: [11 30 24 27 23].
 * Predicted class in the image is 11.
-* Actual class in the image is 12.
+* Actual class in the image is 11.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
